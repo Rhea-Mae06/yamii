@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.bgblr{
+    background-image: url('homewallpaper.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    filter: blur(8px);
+    z-index: -1;
+  }
+
+.head{
+    top: 0;
+    left: 0;
+    display: flex;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed;
+    padding: 1rem 9%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: aqua;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-shadow: 0, 0, 50px #ffffff;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    text-shadow: 0, 0, 25px #ffffff;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+font-weight: 500;
+transition: 0.3s ease;
+border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:active{
+    color: aqua ;
+    border-bottom: 3px solid aqua;
+    text-shadow: 0 0 25px #d9dfed;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1c1f2b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    border: solid white;
+}
+.picture-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picture-section img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+.description-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.description-section h1 {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+    color: #ffffff;
+}
+.description-section p {
+    margin: 0;
+    font-size: 16px;
+    color: #bdafaf;
+    line-height: 1.6;
+}
+
+span{
+ font-size: 2.5rem;
+}
+
+span::after{
+    content: '';
+border: solid rgb(255, 255, 255) 1px;
+margin-left: 2px;
+opacity: 0;
+animation: type 1s ease infinite;
+}
+
+@keyframes type {
+    0%,
+    100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="logindesign.css">
+  <title>LoginPage</title>
+</head>
+<body>
+    <div class="bgblr"></div>
+  <div class="container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form action="#">
+        <div class="textbox">
+          <input type="email" placeholder="Username" id="username" required>
+        </div>
+        <div class="textbox password-container">
+          <input type="password" placeholder="Password" id="password" required>
+          <i class="toggle-password" id="toggle-password" onclick="togglePassword()">👁️</i>
+        </div>
+        <button onclick="func()">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+function togglePassword() {
+  const passwordField = document.getElementById("password");
+  const toggleIcon = document.getElementById("toggle-password");
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text"; // Show the password
+    toggleIcon.textContent = "🙈"; // Change icon to 'Hide'
+  } else {
+    passwordField.type = "password"; // Hide the password
+    toggleIcon.textContent = "👁️"; // Change icon to 'Show'
+  }
+}
+
+function func()
+        {
+        var email = document.getElementById("username").value;
+        var pass = document.getElementById('password').value;
+        if(email == 'rheamae' && pass == 'yamtot123'){
+            alert("succcessfull!")
+            window.location.href = "Homepage.html";
+        }
+        else{
+            alert("Wrong entry! invalid username or password!")
+        }
+        }
+
+
+
+  </script>
+</body>
+</html>
